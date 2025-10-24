@@ -38,12 +38,12 @@ body {
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb { border-radius: 5px; }
 ::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #4ae299; }
+::-webkit-scrollbar-thumb { background: #222; }
 ::-webkit-scrollbar-thumb:hover {  background: #fff; }
 
 textarea::-webkit-scrollbar { width: 5px; }
 textarea::-webkit-scrollbar-track,
 textarea::-webkit-scrollbar-thumb { border-radius: 5px; }
 textarea::-webkit-scrollbar-track { background: #000; }
-textarea::-webkit-scrollbar-thumb { background: #4ae299; }
+textarea::-webkit-scrollbar-thumb { background: #222; }
 textarea::-webkit-scrollbar-thumb:hover { background: #fff; }
