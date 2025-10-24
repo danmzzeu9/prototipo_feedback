@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('main');
-    const jsonPath = '../questions.json';
+    const jsonPath = 'questions.json';
     let stepsData = []; 
     let currentStepIndex = 0; 
     
