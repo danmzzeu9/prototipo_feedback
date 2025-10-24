@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('main');
-    // Seletores para a modal de erro customizada
     const errorModal = document.querySelector('div.error');
     const errorContentP = document.querySelector('div.error-content p');
     const errorCloseButton = document.querySelector('div.error-content button');
@@ -14,32 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let questionsMap = {}; 
 
-    // --- Funções de Controle da Modal de Erro ---
-
-    // Função para mostrar a modal de erro com uma mensagem dinâmica
     const showAlert = (message) => {
         if (errorContentP) {
             errorContentP.textContent = message;
         }
         if (errorModal) {
-            errorModal.style.display = 'flex'; // Torna visível
+            errorModal.style.display = 'flex';
         }
     };
 
-    // Função para esconder a modal de erro
     const hideAlert = () => {
         if (errorModal) {
-            errorModal.style.display = 'none'; // Esconde
+            errorModal.style.display = 'none';
         }
     };
 
-    // Adiciona o listener para fechar a modal
     if (errorCloseButton) {
         errorCloseButton.addEventListener('click', hideAlert);
     }
     
-    // --- Funções de Dados e Navegação (Restante do seu código) ---
-
     const loadAnswers = () => {
         const stored = localStorage.getItem(localStorageKey);
         answers = stored ? JSON.parse(stored) : {};
@@ -245,11 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const navigateSteps = (newIndex) => {
-        // Validação usando a nova função showAlert()
         if (newIndex > currentStepIndex && newIndex < stepsData.length) {
             if (!validateCurrentStep()) {
                 showAlert('Por favor, preencha todas as perguntas desta etapa antes de avançar.');
-                return; // Impede a navegação
+                return;
             }
         }
         
@@ -267,15 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainContent.scrollIntoView({ behavior: 'smooth' });
             }
 
-            // Lógica para a etapa final
             if (currentStepIndex === stepsData.length - 1) {
                 const rawAnswers = JSON.parse(localStorage.getItem(localStorageKey));
                 
                 if (rawAnswers) {
                     const finalResults = formatAnswersForDisplay(rawAnswers);
-                    // Aqui você pode mudar para exibir os resultados em outra modal ou seção
                     console.log('Pesquisa Finalizada! Respostas Coletadas:\n\n' + JSON.stringify(finalResults, null, 2));
-                    // Opcional: showAlert('Pesquisa Finalizada! Veja os resultados no console.');
                 }
                 console.log('Formulário finalizado e etapa de agradecimento exibida!');
             }
