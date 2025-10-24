@@ -1,0 +1,83 @@
+[
+    {
+        "id": "step-1",
+        "title": "Estabelecimento",
+        "description": "Gostaríamos de ter um feedback referente ao nosso estabelecimento, para que possamos melhorar nossa qualidade e oferecer um atendimento de excelência.",
+        "questions": [
+            {
+                "text": "Como foi sua experiência no ambiente externo do nosso estabelecimento?",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            },
+            {
+                "text": "Como foi sua experiência no ambiente interno do nosso estabelecimento?",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            },
+            {
+                "text": "O que achou da higiene em nosso estabelecimento, incluindo banheiros e outras áreas?",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            }
+        ]
+    },
+    {
+        "id": "step-2",
+        "title": "Cardápio",
+        "description": "Gostaríamos de ter um feedback sobre a nossa variedade de pratos e bebidas.",
+        "questions": [
+            {
+                "text": "Qualidade dos pratos e bebidas.",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            },
+            {
+                "text": "Variedade do cardápio.",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            }
+        ]
+    },
+    {
+        "id": "step-3",
+        "title": "Atendimento",
+        "description": "Seu feedback é fundamental para garantir um atendimento de excelência.",
+        "questions": [
+            {
+                "text": "Cordialidade e atenção da nossa equipe.",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            },
+            {
+                "text": "Rapidez no atendimento e na entrega dos pedidos.",
+                "type": "rating",
+                "min": 1,
+                "max": 10
+            }
+        ]
+    },
+    {
+        "id": "step-4",
+        "title": "Sugestões",
+        "description": "Compartilhe suas sugestões e comentários gerais para nos ajudar a melhorar.",
+        "questions": [
+            {
+                "text": "Quais sugestões você daria para melhorarmos nossos serviços?",
+                "type": "textarea",
+                "placeholder": "Responda aqui..."
+            }
+        ]
+    },
+    {
+        "id": "step-5",
+        "title": "Obrigado!",
+        "description": "Sua opinião é muito valiosa para nós. Agradecemos por dedicar seu tempo. Volte sempre!",
+        "questions": []
+    }
+]
